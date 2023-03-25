@@ -1,6 +1,17 @@
 function [Q, R] = qrmodgrsch(V)
+% Función que hace la factorización QR de Gram-Schmidt de una matriz V 
+% (hace uso de la función [Q, R] = qrmodgrsch(V)).
+% 
+% Input:
+%       V: matriz de tamaño n*n
+% 
+% Output:
+%       Q: matriz de tamaño n*n, es ortogonal
+%       R: matriz de tamaño n*n, es triangular superior 
+%       Cumple que Q*R = V
+
 % Comprobar que las columnas de V son linealmente independientes
-if rank(V) < size(V,2)
+if rank(V) ~= size(V,size(V)-1)
     error('Las columnas de la matriz no son linealmente independientes')
 end
 

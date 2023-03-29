@@ -13,7 +13,7 @@ function [lambda,x]=Potencia(A,tol)
     while norm((x - x0), inf) > tol
         x0 = x;
         x = A*x0;
-        lambda = max(x);
+        lambda = abs(max(x));
         x = x / lambda;
         i = i+1;
         fprintf('iteración número %d\n',i)

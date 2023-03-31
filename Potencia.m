@@ -33,6 +33,13 @@ function [lambda, x] = Potencia(A, tol)
         [~, index] = max(abs(x));
         lambda = x(index);
         x = x / lambda;
+        % Impresión por pantalla de la lista 
+        fprintf('Iteración %d: x = [', i);
+        for k = 1:f-1
+            fprintf('%.4f, ', x(k));
+        end
+        fprintf('%.4f], lambda = %.4f\r', x(f), lambda);
+        
         i = i+1;
     end
 end

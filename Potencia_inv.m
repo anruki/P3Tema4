@@ -1,6 +1,6 @@
 function [lambda, x] = Potencia_inv(A, tol)
 % Función que permite calcular el autovalor de menor valor absoluto y su 
-% autovector asociado dada una matriz de autovalores distintos reales.
+% autovector asociado.
 % El algoritmo utilizado es el Método de la potencia inversa.
 % Inputs: 
 % A = matriz cuadrada con autovalores distintos reales y distintos de cero
@@ -9,11 +9,7 @@ function [lambda, x] = Potencia_inv(A, tol)
 % lambda = autovalor de menor magnitud (solución númerica)
 % x = autovector asociado en forma de vector columna (solución númerica)
 % El error se calculará como la norma infinito del vector diferencia entre
-% iteraciones, deteniéndose el algoritmo cuando este sea menor que la 
-% tolerancia exigida.
-% Observación: por simplicidad se asume que 0 no es autovalor de la matriz
-% introducida y que todos los autovalores son reales y distintos, por
-% tanto no entraremos en el tratamiento de excepciones para estos casos.
+% iteraciones.
     % El procedimiento consiste en calcular el autovalor de mayor magnitud 
     % de la matriz inversa, que por propiedades de los autovalores sabemos 
     % que será el inverso del de menor magnitud de la matriz inicial. 

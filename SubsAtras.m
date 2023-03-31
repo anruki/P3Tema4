@@ -1,12 +1,12 @@
 function y = SubsAtras(A,b)
-    % Función que utiliza el método de sustitución hacia atrás
-    % para obtener la solución de un sistema cuya matriz de
-    % coeficientes es triangular inferior. 
-    % INPUTS:
-    %   A = matriz triangular inferior
-    %   b = vector columna de términos independientes
-    % OUTPUTS
-    %   y = vector columna solución del sistema
+% Función que utiliza el método de sustitución hacia atrás
+% para obtener la solución de un sistema cuya matriz de
+% coeficientes es triangular inferior. 
+% INPUTS:
+%   A = matriz triangular inferior
+%   b = vector columna de términos independientes
+% OUTPUTS
+%   y = vector columna solución del sistema
     Ub=[A,b];
     [f, c] = size(Ub);
     y = zeros(f, 1);

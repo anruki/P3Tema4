@@ -1,12 +1,12 @@
 function y = SubsAdel(A,b)
-    % Función que utiliza el método de sustitución hacia adelante
-    % para obtener la solución de un sistema cuya matriz de
-    % coeficientes es triangular superior. 
-    % INPUTS:
-    %   A = matriz triangular superior
-    %   b = vector columna de términos independientes
-    % OUTPUTS
-    %   y = vector columna solución del sistema
+% Función que utiliza el método de sustitución hacia adelante
+% para obtener la solución de un sistema cuya matriz de
+% coeficientes es triangular superior. 
+% INPUTS:
+%   A = matriz triangular superior
+%   b = vector columna de términos independientes
+% OUTPUTS
+%   y = vector columna solución del sistema
     Lb=[A,b];
     [f, c] = size(Lb);
     y = zeros(f, 1);

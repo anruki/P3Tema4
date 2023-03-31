@@ -1,7 +1,7 @@
 function [Q, R] = QRFact(A)
 % Función que factoriza una matriz en una ortogonal y una triangular
 % superior.
-% El algoritmo utilizado es el Método de factorización QR for reflexiones 
+% El algoritmo utilizado es el Método de factorización QR por reflexiones 
 % de Housholder.
 % Inputs:
 % A = matriz cuadrada de la que se quiere obtener su factorización

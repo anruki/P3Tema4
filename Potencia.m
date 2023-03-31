@@ -1,19 +1,15 @@
 function [lambda, x] = Potencia(A, tol)
 % Función que permite calcular el autovalor de mayor valor absoluto y su 
-% autovector asociado dada una matriz de autovalores distintos reales.
+% autovector asociado.
 % El algoritmo utilizado es el Método de la potencia.
-% Inputs: 
+% Inputs:
 % A = matriz cuadrada con autovalores distintos reales
 % tol = tolerancia para detener el algoritmo
 % Outputs:
 % lambda = autovalor de mayor magnitud (solución númerica)
 % x = autovector asociado en forma de vector columna (solución númerica)
 % El error se calculará como la norma infinito del vector diferencia entre
-% iteraciones, deteniéndose el algoritmo cuando este sea menor que la 
-% tolerancia exigida.
-% Observación: por simplicidad se asume que todos los autovalores son 
-% reales y distintos, por tanto no entraremos en el tratamiento de 
-% excepciones para estos casos.
+% iteraciones.
     [f, ~] = size(A);
     % Inicialización del vector estimación
     xest = ones(f, 1);

@@ -11,12 +11,12 @@ function [Q, R] = qrmodgrsch(V)
 %       Cumple que Q*R = V
 
 % Comprobar que las columnas de V son linealmente independientes
-    if rank(V) ~= size(V,size(V)-1)
+[m, n] = size(V);
+    if rank(V)>n
         error('Las columnas de la matriz no son linealmente independientes')
     end
     
     % Inicializar la matriz Q y R
-    [m, n] = size(V);
     Q = zeros(m,n);
     R = zeros(n,n);
     

@@ -21,6 +21,10 @@ function [lambda, x] = Potencia(A, tol)
     lambda = x(index);
     x = x / lambda;
     i = 1;
+    % Impresión por pantalla de la lista con los resultados
+    fprintf( ...
+        "Iteración %d: x = [%s] lambda = %.4f\n", ...
+        i, num2str(x', " %.4f "), lambda);
     % El proceso se repite hasta que la norma infinito del vector 
     % diferencia entre iteraciones sea menor que la tolerancia exigida
     while norm(x - xest, 'Inf') > tol
@@ -29,13 +33,10 @@ function [lambda, x] = Potencia(A, tol)
         [~, index] = max(abs(x));
         lambda = x(index);
         x = x / lambda;
-        % Impresión por pantalla de la lista 
-        fprintf('Iteración %d: x = [', i);
-        for k = 1:f-1
-            fprintf('%.4f, ', x(k));
-        end
-        fprintf('%.4f], lambda = %.4f\r', x(f), lambda);
-        
         i = i+1;
+        % Impresión por pantalla de la lista con los resultados
+        fprintf( ...
+            "Iteración %d: x = [%s] lambda = %.4f\n", ...
+            i, num2str(x', " %.4f "), lambda);
     end
 end

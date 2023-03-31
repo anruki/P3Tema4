@@ -10,7 +10,7 @@ function [Q, R] = qrmodgrsch(V)
     % Comprobamos que las columnas de V son linealmente independientes
     [m, n] = size(V);
     if rank(V) > n
-        disp('Las columnas de la matriz no son linealmente independientes')
+        disp('ERROR Las columnas de la matriz no son linealmente independientes')
         return
     end
     % Inicializar la matriz Q y R

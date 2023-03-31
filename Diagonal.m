@@ -15,7 +15,7 @@ function [lambda,i] = Diagonal(A, tol)
     % serlo tiene sus autovalores en la diagonal y que por ser semejante
     % son los autovalores de la inicial.
     lambda_est = diag(A);
-    [Q,R] = qr(A);
+    [Q,R] = QRFact(A);
     % La nueva A será semejante a la A de la anterior iteración por ser Q
     % (que es ortogonal) la matriz de paso.
     A = R*Q;

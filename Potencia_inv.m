@@ -2,12 +2,13 @@ function [lambda, x] = Potencia_inv(A, tol)
 % Función que permite calcular el autovalor de menor valor absoluto y su 
 % autovector asociado.
 % El algoritmo utilizado es el Método de la potencia inversa.
+% REQUERIDO: Se usan la funciones LUCrout, SubsAdel, SubsAtras.
 % Inputs: 
-% A = matriz cuadrada con autovalores distintos reales y distintos de cero
-% tol = tolerancia para detener el algoritmo
+%   A = matriz cuadrada con autovalores distintos reales y distintos de cero
+%   tol = tolerancia para detener el algoritmo
 % Outputs:
-% lambda = autovalor de menor magnitud (solución númerica)
-% x = autovector asociado en forma de vector columna (solución númerica)
+%   lambda = autovalor de menor magnitud (solución númerica)
+%   x = autovector asociado en forma de vector columna (solución númerica)
 % El error se calculará como la norma infinito del vector diferencia entre
 % iteraciones.
     % El procedimiento consiste en calcular el autovalor de mayor magnitud 

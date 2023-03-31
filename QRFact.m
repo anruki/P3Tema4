@@ -1,13 +1,13 @@
 function [Q, R] = QRFact(A)
-% Función que factoriza una matriz en una ortogonal y una triangular
-% superior.
+% Función que factoriza una matriz en el producto de una ortogonal por una 
+% triangular superior.
 % El algoritmo utilizado es el Método de factorización QR por reflexiones 
 % de Housholder.
 % Inputs:
-% A = matriz cuadrada de la que se quiere obtener su factorización
+%   A = matriz cuadrada de la que se quiere obtener su factorización
 % Ouputs:
-% Q = matriz ortogonal (columnas forman una base ortonormal)
-% R = matriz triangular superior
+%   Q = matriz ortogonal (columnas forman una base ortonormal)
+%   R = matriz triangular superior
     [f, ~] = size(A);
     I = eye(f);
     Q = I;

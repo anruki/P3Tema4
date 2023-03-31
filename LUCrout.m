@@ -1,10 +1,10 @@
 function [L, U] = LUCrout(A)
 % Descomposición LU por el método de Crout
-% Input
-%       - A: matriz de coeficientes 
+% Inputs:
+%   A = matriz de coeficientes 
 % Outputs:
-%       - L: matriz triangular inferior
-%       - U: matriz triangular superior
+%   L = matriz triangular inferior
+%   U = matriz triangular superior
     [n, ~] = size(A);
     L = zeros(n);
     U = eye(n);

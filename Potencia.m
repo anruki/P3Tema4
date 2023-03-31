@@ -3,11 +3,11 @@ function [lambda, x] = Potencia(A, tol)
 % autovector asociado.
 % El algoritmo utilizado es el Método de la potencia.
 % Inputs:
-% A = matriz cuadrada con autovalores distintos reales
-% tol = tolerancia para detener el algoritmo
+%   A = matriz cuadrada con autovalores distintos reales
+%   tol = tolerancia para detener el algoritmo
 % Outputs:
-% lambda = autovalor de mayor magnitud (solución númerica)
-% x = autovector asociado en forma de vector columna (solución númerica)
+%   lambda = autovalor de mayor magnitud (solución númerica)
+%   x = autovector asociado en forma de vector columna (solución númerica)
 % El error se calculará como la norma infinito del vector diferencia entre
 % iteraciones.
     [f, ~] = size(A);

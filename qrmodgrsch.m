@@ -1,16 +1,17 @@
 function [Q, R] = qrmodgrsch(V)
-% Función que hace la factorización QR de Gram-Schmidt de una matriz V 
-% (hace uso de la función [Q, R] = qrmodgrsch(V)).
+% Función que factoriza una matriz en el producto de una ortogonal por una 
+% triangular superior.
+% El algoritmo utilizado es el Método de factorización QR por Gram-Schmidt.
 % Inputs
-% V = matriz de tamaño n*n
+%   V = matriz cuadrada
 % Outputs:
-% Q = matriz ortogonal (columnas forman una base ortonormal)
-% R = matriz triangular superior
-% Cumple que Q*R = V
+%   Q = matriz ortogonal (columnas forman una base ortonormal)
+%   R = matriz triangular superior
     % Comprobamos que las columnas de V son linealmente independientes
     [m, n] = size(V);
-    if rank(V)>n
-        error('Las columnas de la matriz no son linealmente independientes')
+    if rank(V) > n
+        disp('Las columnas de la matriz no son linealmente independientes')
+        return
     end
     % Inicializar la matriz Q y R
     Q = zeros(m,n);

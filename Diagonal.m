@@ -1,6 +1,6 @@
 function [lambda,i] = Diagonal(A, tol)
 % Función que permite calcular autovalores de una matriz mediante
-% iteraciones.
+% iteraciones con factorización QR.
 % REQUERIDO: Se usa la función QRFact.
 % Input:
 %   A = matriz cuadrada que queremos factorizar
